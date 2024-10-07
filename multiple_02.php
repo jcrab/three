@@ -1,12 +1,12 @@
 <?php session_start();
 //echo "this is NOT ignored";
 //var_dump($_POST);
-if (!isset($_POST['first_name'])) {
+if (!isset($_GET['first_name'])) {
     header("Location: index.html");
 }
 
-$fn = $_POST['first_name'];
-$ln = $_POST['family_name'];
+$fn = $_GET['first_name'];
+$ln = $_GET['family_name'];
 
 $_SESSION['first'] = $fn;
 $_SESSION['last'] = $ln;
